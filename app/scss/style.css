@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,700");
+/* line 10, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.top {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%; }
+
+/* line 16, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.gfont {
+  font-family: "Roboto", sans-serif;
+  float: left;
+  padding: 5px 25px;
+  font-size: 42px; }
+  /* line 21, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .gfont span {
+    display: inline-block;
+    position: absolute; }
+
+/* line 26, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.blue {
+  color: #4285f4; }
+
+/* line 29, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.green {
+  color: #34A853; }
+
+/* line 32, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.red {
+  color: #EA4335; }
+
+/* line 35, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.yellow {
+  color: #fbbc05; }
+
+/* line 38, /Users/rwakefield/gmail_2/app/scss/style.scss */
+body {
+  font-size: 14px;
+  min-width: 300px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 70px 20px 0px 20px;
+  font-weight: 100;
+  overflow-x: hidden; }
+
+/* line 49, /Users/rwakefield/gmail_2/app/scss/style.scss */
+span {
+  display: block;
+  padding: 0 0 10px 0; }
+
+/* line 53, /Users/rwakefield/gmail_2/app/scss/style.scss */
+h1 {
+  margin: 15px 0 30px 0; }
+
+/* line 56, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.messages {
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  width: 80%;
+  float: left;
+  margin-left: 20%; }
+  /* line 65, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .messages .message {
+    background: #ffffff;
+    padding: 5%;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 3px #d9d9d9;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.05s background;
+    border-radius: 3px; }
+    /* line 73, /Users/rwakefield/gmail_2/app/scss/style.scss */
+    .messages .message:active {
+      background: #e9f0f2; }
+    /* line 76, /Users/rwakefield/gmail_2/app/scss/style.scss */
+    .messages .message h3 {
+      margin: 0 0 12px 0; }
+  /* line 80, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .messages .grid {
+    width: 20%;
+    margin: 15px 1.65%;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer; }
+    /* line 86, /Users/rwakefield/gmail_2/app/scss/style.scss */
+    .messages .grid .body {
+      display: none; }
+    /* line 89, /Users/rwakefield/gmail_2/app/scss/style.scss */
+    .messages .grid .modal {
+      position: fixed;
+      z-index: 100;
+      width: 70%;
+      height: auto;
+      padding: 25px 50px;
+      background: #ffffff;
+      position: absolute;
+      top: 15%;
+      left: 15%; }
+
+/* line 102, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.modal_back {
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); }
+
+/* line 113, /Users/rwakefield/gmail_2/app/scss/style.scss */
+input, button {
+  font-size: 13px;
+  display: inline;
+  padding: 12px 15px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px 0px 15px 0px;
+  box-shadow: 0px 1px 3px #d9d9d9;
+  border: none;
+  border-radius: 3px; }
+
+/* line 123, /Users/rwakefield/gmail_2/app/scss/style.scss */
+input[type="checkbox"] {
+  margin: 0px 15px 0px 0px; }
+
+/* line 126, /Users/rwakefield/gmail_2/app/scss/style.scss */
+label {
+  display: block;
+  padding: 10px; }
+
+/* line 129, /Users/rwakefield/gmail_2/app/scss/style.scss */
+button {
+  font-weight: 500;
+  margin-left: 5px;
+  background: #EA4335;
+  color: #ffffff;
+  cursor: pointer; }
+  /* line 135, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  button:hover {
+    opacity: .75; }
+
+/* line 139, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.complete {
+  text-decoration: line-through;
+  color: grey; }
+
+/* line 143, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#messageSearch {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid #000000;
+  background: #f3f3f3;
+  margin: 25px auto 15px -70px;
+  padding: 10px 0px; }
+
+/* line 153, /Users/rwakefield/gmail_2/app/scss/style.scss */
+::-webkit-input-placeholder {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase; }
+
+/* line 158, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.content {
+  width: 100%; }
+
+/* line 161, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.tabs {
+  width: 15%;
+  float: left;
+  margin-bottom: 50px;
+  margin-right: 5%;
+  position: fixed; }
+  /* line 167, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .tabs ul {
+    font-family: "Montserrat", sans-serif;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left; }
+    /* line 173, /Users/rwakefield/gmail_2/app/scss/style.scss */
+    .tabs ul li {
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      background: #ffffff;
+      padding: 5%;
+      margin-bottom: 20px;
+      box-shadow: 0px 1px 3px #d9d9d9;
+      font-family: "Montserrat", sans-serif;
+      transition: 0.05s background;
+      border-radius: 3px; }
+      /* line 184, /Users/rwakefield/gmail_2/app/scss/style.scss */
+      .tabs ul li:active {
+        background: #e9f0f2; }
+      /* line 187, /Users/rwakefield/gmail_2/app/scss/style.scss */
+      .tabs ul li:hover {
+        background: #e9f0f2; }
+      /* line 190, /Users/rwakefield/gmail_2/app/scss/style.scss */
+      .tabs ul li h3 {
+        margin: 0 0 12px 0; }
+  /* line 195, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .tabs .action_btn {
+    width: 100px;
+    text-align: center; }
+  /* line 199, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .tabs #markRead {
+    background: #4285f4; }
+  /* line 202, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .tabs #starred {
+    background: #fbbc05; }
+
+/* line 206, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.read {
+  color: #e1e1e1; }
+  /* line 208, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .read h3, .read h4, .read p {
+    text-decoration: line-through; }
+
+/* line 212, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.messages .star_meessage {
+  background: rgba(251, 188, 5, 0.5); }
+
+/* line 215, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#toggleView {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  width: 125px; }
+  /* line 220, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  #toggleView #gridView {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 30px;
+    padding: 8px 5px 5px 15px;
+    border: 1px solid #e3e3e3;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0px 1px 3px #d9d9d9; }
+    /* line 231, /Users/rwakefield/gmail_2/app/scss/style.scss */
+    #toggleView #gridView .gridBox {
+      width: 13px;
+      height: 9px;
+      display: block;
+      margin: 2px;
+      float: left; }
+  /* line 239, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  #toggleView #listView {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 24px;
+    padding: 10px 5px;
+    vertical-align: bottom;
+    border: 1px solid #e3e3e3;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0px 1px 3px #d9d9d9; }
+    /* line 251, /Users/rwakefield/gmail_2/app/scss/style.scss */
+    #toggleView #listView .listLine {
+      width: 30px;
+      height: 2px;
+      display: block;
+      margin: 4px 0; }
+  /* line 259, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  #toggleView .view_btn div.listLine, #toggleView .view_btn div.gridBox {
+    background: #000000; }
+  /* line 263, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  #toggleView .view_btn:hover {
+    opacity: .25;
+    background: #fbbc05; }
+  /* line 267, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  #toggleView .active {
+    background: #fbbc05; }
+    /* line 269, /Users/rwakefield/gmail_2/app/scss/style.scss */
+    #toggleView .active div.listLine, #toggleView .active div.gridBox {
+      background: #34A853; }
+
+/* line 276, /Users/rwakefield/gmail_2/app/scss/style.scss */
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  margin: 0 0.5em 0 0;
+  cursor: pointer; }
+
+/* line 285, /Users/rwakefield/gmail_2/app/scss/style.scss */
+input[type="checkbox"]:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #e1e1e1;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  border-radius: 0.4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+
+/* line 300, /Users/rwakefield/gmail_2/app/scss/style.scss */
+input[type="checkbox"]:checked:before {
+  content: '\2714';
+  background: #EA4335; }
+
+/* line 305, /Users/rwakefield/gmail_2/app/scss/style.scss */
+input[type="checkbox"]:after {
+  content: '';
+  width: 300%;
+  height: 300%;
+  background-color: #EA4335;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: none; }
+
+/* line 320, /Users/rwakefield/gmail_2/app/scss/style.scss */
+input[type="checkbox"]:checked:after {
+  animation: check 0.3s; }
+
+@keyframes check {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0; } }
+
+/* line 338, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#r {
+  animation: r .5s forwards; }
+
+@keyframes r {
+  0% {
+    left: -40px; }
+  100% {
+    left: 30px; } }
+
+/* line 349, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#o {
+  animation: o .75s forwards; }
+
+@keyframes o {
+  0% {
+    left: -40px; }
+  100% {
+    left: 55px; } }
+
+/* line 360, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#s1 {
+  animation: s1 1s forwards; }
+
+@keyframes s1 {
+  0% {
+    left: -60px; }
+  100% {
+    left: 78px; } }
+
+/* line 371, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#s2 {
+  animation: s2 1.25s forwards; }
+
+@keyframes s2 {
+  0% {
+    left: -80px; }
+  100% {
+    left: 100px; } }
+
+/* line 382, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#g {
+  animation: g 1.5s forwards; }
+
+@keyframes g {
+  0% {
+    left: -90px; }
+  100% {
+    left: 122px; } }
+
+/* line 393, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#l {
+  animation: l 1.75s forwards; }
+
+@keyframes l {
+  0% {
+    left: -100px; }
+  100% {
+    left: 145px; } }
+
+/* line 404, /Users/rwakefield/gmail_2/app/scss/style.scss */
+#e {
+  animation: e 2s forwards; }
+
+@keyframes e {
+  0% {
+    left: -100px; }
+  100% {
+    left: 155px; } }
+
+/* line 415, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.hide {
+  display: none; }
+
+/* line 418, /Users/rwakefield/gmail_2/app/scss/style.scss */
+.show {
+  display: block; }
+
+@media only screen and (max-width: 900px) {
+  /* line 422, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .messages .grid {
+    width: 35%; } }
+
+@media only screen and (max-width: 850px) {
+  /* line 427, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  #messageSearch {
+    max-width: 250px; } }
+
+@media only screen and (max-width: 680px) {
+  /* line 432, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .tabs .action_btn {
+    width: 65px;
+    text-align: center;
+    padding: 10px 0px;
+    margin-left: 0; }
+  /* line 438, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  #messageSearch, .header {
+    margin-top: 80px; }
+  /* line 441, /Users/rwakefield/gmail_2/app/scss/style.scss */
+  .messages .grid {
+    width: 90%; } }
+
+/*# sourceMappingURL=style.css.map */

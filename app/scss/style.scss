@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,700');
+
+$logo-font: 'Roboto', sans-serif;
+$body-font: 'Montserrat', sans-serif;
+$blue: #4285f4;
+$green: #34A853;
+$red: #EA4335;
+$yellow: #fbbc05;
+
+.top {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+.gfont {
+	font-family: $logo-font;
+	float: left;
+	padding: 5px 25px;
+	font-size: 42px;
+	span {
+		display: inline-block;
+		position: absolute;
+	}
+}
+.blue {
+	color: $blue;
+}
+.green {
+	color: $green;
+}
+.red {
+	color: $red;
+}
+.yellow {
+	color: $yellow;
+}
+body {
+	font-size: 14px;
+	min-width: 300px;
+	font-family: $body-font;
+	text-align: center;
+	background: #f3f3f3;
+	margin: 0;
+	padding: 70px 20px 0px 20px;
+	font-weight: 100;
+	overflow-x: hidden;
+}
+span {
+	display: block;
+	padding: 0 0 10px 0;
+}
+h1 {
+	margin: 15px 0 30px 0;
+}
+.messages {
+	font-family: $body-font;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	width: 80%;
+	float: left;
+	margin-left: 20%;
+	transition: 0.5s ease all;
+	.message {
+		background: #ffffff;
+		padding: 5%;
+		margin-bottom: 20px;
+		box-shadow: 0px 1px 3px rgb(217, 217, 217);
+		font-family: $body-font;
+		transition: 0.05s background;
+		border-radius: 3px;
+		&:active {
+			background: #e9f0f2;
+		}
+		h3 {
+			margin: 0 0 12px 0;
+		}
+	}
+	.grid {
+		width: 20%;
+		margin: 15px 1.65%;
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+		.body {
+			display: none;
+		}
+		.modal {
+			position: fixed;
+			z-index: 100;
+			width:70%;
+			height:auto;
+			padding: 25px 50px;
+			background: #ffffff;
+			position: absolute;
+			top: 15%;
+			left: 15%;
+		}
+	}
+}
+.modal_back {
+	z-index: 50;
+	width:100%;
+	height:100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .5);
+}
+input, button {
+	font-size: 13px;
+	display: inline;
+	padding: 12px 15px;
+	font-family: $body-font;
+	margin: 0px 0px 15px 0px;
+	box-shadow: 0px 1px 3px rgb(217, 217, 217);
+	border: none;
+	border-radius: 3px;
+}
+input[type="checkbox"] {
+	margin: 0px 15px 0px 0px;
+}
+label {
+	display: block; padding: 10px;
+}
+button {
+	font-weight: 500;
+	margin-left: 5px;
+	background: $red;
+	color: #ffffff;
+	cursor: pointer;
+	&:hover {
+		opacity: .75;
+	}
+}
+.complete {
+	text-decoration: line-through;
+	color: grey;
+}
+#messageSearch {
+	width: 100%;
+	max-width: 400px;
+	box-shadow: none;
+	border-radius: 0;
+	border-bottom: 1px solid #000000;
+	background: #f3f3f3;
+	margin: 25px auto 15px -70px;
+	padding: 10px 0px;
+}
+::-webkit-input-placeholder {
+	color: #000000;
+	font-family: $body-font;
+	text-transform: uppercase;
+}
+.content {
+	width: 100%;
+}
+.tabs {
+	width: 15%;
+	float: left;
+	margin-bottom: 50px;
+	margin-right: 5%;
+	position: fixed;
+	ul {
+		font-family: $body-font;
+		list-style-type: none;
+		margin: 0 auto;
+		padding: 0;
+		text-align: left;
+		li {
+			width: 100%;
+			text-align: center;
+			cursor: pointer;
+			background: #ffffff;
+			padding: 5%;
+			margin-bottom: 20px;
+			box-shadow: 0px 1px 3px rgb(217, 217, 217);
+			font-family: $body-font;
+			transition: 0.05s background;
+			border-radius: 3px;
+			&:active {
+				background: #e9f0f2;
+			}
+			&:hover {
+				background: #e9f0f2;
+			}
+			h3 {
+				margin: 0 0 12px 0;
+			}
+		}
+	}
+	.action_btn {
+		width: 100px;
+		text-align: center;
+	}
+	#markRead {
+		background: $blue;
+	}
+	#starred {
+		background: $yellow
+	}
+}
+.read {
+	color: #e1e1e1;
+	h3,h4,p {
+		text-decoration: line-through;
+	}
+}
+.messages .star_meessage {
+	background: rgba(251, 188, 5,0.5);
+}
+#toggleView {
+	position: absolute;
+	right: 30px;
+	top: 25px;
+	width: 125px;
+	#gridView {
+		display: block;
+		float: left;
+		width: 40px;
+		height: 30px;
+		padding: 8px 5px 5px 15px;
+		border: 1px solid #e3e3e3;
+		border-top-left-radius: 100px;
+		border-bottom-left-radius: 100px;
+		cursor: pointer;
+		box-shadow: 0px 1px 3px rgb(217, 217, 217);
+		.gridBox {
+			width: 13px;
+			height: 9px;
+			display: block;
+			margin: 2px;
+			float: left;
+		}
+	}
+	#listView {
+		display: block;
+		float: left;
+		width: 40px;
+		height: 24px;
+		padding: 10px 5px;
+		vertical-align: bottom;
+		border: 1px solid #e3e3e3;
+		border-top-right-radius: 100px;
+		border-bottom-right-radius: 100px;
+		cursor: pointer;
+		box-shadow: 0px 1px 3px rgb(217, 217, 217);
+		.listLine {
+			width: 30px;
+			height: 2px;
+			display: block;
+			margin: 4px 0;
+		}
+	}
+	.view_btn {
+		div.listLine, div.gridBox {
+			background: #000000;;
+		}
+	}
+	.view_btn:hover {
+		opacity: .25;
+		background: $yellow;
+	}
+	.active {
+		background: $yellow;
+		div.listLine, div.gridBox {
+			background: $green;
+		}
+	}
+}
+
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  margin: 0 0.5em 0 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #e1e1e1;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  border-radius: 0.4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+input[type="checkbox"]:checked:before {
+  content: '\2714';
+  background: $red;
+}
+
+input[type="checkbox"]:after {
+  content: '';
+  width: 300%;
+  height: 300%;
+  background-color: $red;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  opacity: 0;
+  transform: translate( -50%, -50% );
+  animation: none;
+}
+
+input[type="checkbox"]:checked:after {
+  animation: check 0.3s;
+}
+
+@keyframes check {
+	0% {
+	  transform: translate( -50%, -50% ) scale( 0.1 );
+	  opacity: 1;
+	}
+	40% {
+	  opacity: 1; }
+	100% {
+	  transform: translate( -50%, -50% ) scale( 1 );
+	  opacity: 0;
+	}
+}
+
+
+#r {
+	animation: r .5s forwards
+}
+@keyframes r {
+	0% {
+		left: -40px;
+	}
+	100% {
+		left: 30px;
+	}
+}
+#o {
+	animation: o .75s forwards
+}
+@keyframes o {
+	0% {
+		left: -40px;
+	}
+	100% {
+		left: 55px;
+	}
+}
+#s1 {
+	animation: s1 1s forwards
+}
+@keyframes s1 {
+	0% {
+		left: -60px;
+	}
+	100% {
+		left: 78px;
+	}
+}
+#s2 {
+	animation: s2 1.25s forwards
+}
+@keyframes s2 {
+	0% {
+		left: -80px;
+	}
+	100% {
+		left: 100px;
+	}
+}
+#g {
+	animation: g 1.5s forwards
+}
+@keyframes g {
+	0% {
+		left: -90px;
+	}
+	100% {
+		left: 122px;
+	}
+}
+#l {
+	animation: l 1.75s forwards
+}
+@keyframes l {
+	0% {
+		left: -100px;
+	}
+	100% {
+		left: 145px;
+	}
+}
+#e {
+	animation: e 2s forwards
+}
+@keyframes e {
+	0% {
+		left: -100px;
+	}
+	100% {
+		left: 155px;
+	}
+}
+.animateHide {
+	animation: hidding .5s forwards;
+}
+.animateShow {
+	animation: showing .5s forwards;
+}
+@keyframes hidding {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@keyframes showing {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+@media only screen and (max-width: 900px) {
+	.messages .grid {
+		width: 35%;
+	}
+}
+@media only screen and (max-width: 850px) {
+	#messageSearch {
+		max-width: 250px;
+	}
+}
+@media only screen and (max-width: 680px) {
+	.tabs .action_btn {
+		width: 65px;
+		text-align: center;
+		padding: 10px 0px;
+		margin-left: 0;
+	}
+	#messageSearch, .header {
+		margin-top: 80px;
+	}
+	.messages .grid {
+		width: 90%;
+	}
+}
+
+
+
+
+
