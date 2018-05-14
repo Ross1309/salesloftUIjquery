@@ -1,6 +1,6 @@
 $(document).ready(function($) {
 
-	$.getJSON("https://api.myjson.com/bins/1b3a66", function(data) {
+	$.getJSON("https://api.myjson.com/bins/jl20u", function(data) {
 			$.each(data, function(i) {
 				if (i == "messages") {
 				$.each(this, function (key, value) {
