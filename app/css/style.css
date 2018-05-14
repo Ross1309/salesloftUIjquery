@@ -66,6 +66,8 @@ h1 {
       background: #e9f0f2; }
     .messages .message h3 {
       margin: 0 0 12px 0; }
+    .messages .message h3.sender_email {
+      word-break: break-all; }
     .messages .message h4.sent_message_title {
       font-size: 18px;
       margin: 10px 0;
