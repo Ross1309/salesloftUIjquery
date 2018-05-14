@@ -66,6 +66,13 @@ h1 {
       background: #e9f0f2; }
     .messages .message h3 {
       margin: 0 0 12px 0; }
+    .messages .message h4.sent_message_title {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #34A853; }
+    .messages .message h4.red {
+      color: #EA4335;
+      margin: 10px 0; }
   .messages .grid {
     width: 20%;
     margin: 15px 1.65%;
@@ -84,6 +91,9 @@ h1 {
       position: absolute;
       top: 15%;
       left: 15%; }
+  .messages .sent_message {
+    border: 1px solid #e3e3e3;
+    padding: 10px; }
 
 .modal_back {
   z-index: 50;
@@ -121,6 +131,9 @@ button {
   cursor: pointer; }
   button:hover {
     opacity: .75; }
+
+.reply_btn {
+  background-color: #34A853; }
 
 .complete {
   text-decoration: line-through;
@@ -237,6 +250,29 @@ button {
     background: #fbbc05; }
     #toggleView .active div.listLine, #toggleView .active div.gridBox {
       background: #34A853; }
+
+.modal_reply {
+  position: relative;
+  padding-bottom: 20px; }
+  .modal_reply label {
+    float: left;
+    margin-top: 0px; }
+  .modal_reply input {
+    min-width: 195px;
+    border: 1px solid #eee; }
+  .modal_reply .reply_area {
+    clear: both;
+    width: 100%;
+    min-height: 150px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid #eee;
+    box-shadow: 0px 1px 3px #d9d9d9; }
+  .modal_reply button.send_btn {
+    position: absolute;
+    background-color: #4285f4;
+    right: 0;
+    margin: 10px 0; }
 
 input[type="checkbox"] {
   appearance: none;

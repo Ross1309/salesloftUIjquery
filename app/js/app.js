@@ -1,10 +1,10 @@
 $(document).ready(function($) {
 
-	$.getJSON("https://api.myjson.com/bins/dq3vy", function(data) {
+	$.getJSON("https://api.myjson.com/bins/1b3a66", function(data) {
 			$.each(data, function(i) {
 				if (i == "messages") {
 				$.each(this, function (key, value) {
-					$('.messages').append("<li class='message'><div class='inner_wrap'><h3 class='launch'>" + (value['subject']) + "</h3><h3 class='launch'>" + (value['sender']) + "</h3><div class='body'>" + (value['body']) + "</div><p>Date: " + (value['date']) + "</p><p class='tags'>" + (value['tags']) + "</p></div><input type='checkbox' class='checkbox'/><button class='remove_btn'> Delete </button><div class='modal hide'><h2>Message</h2><h3 class='launch'>" + (value['subject']) + "</h3><h4>Sender:  " + (value['sender']) + "</h4><p>" + (value['body']) + "</p></div></li>");
+					$('.messages').append("<li class='message'><div class='inner_wrap'><h3 class='launch'>" + (value['subject']) + "</h3><h3 class='launch'>" + (value['sender']) + "</h3><div class='body'>" + (value['body']) + "</div><p>Date: " + (value['date']) + "</p><p class='tags'>Tags: " + (value['tags']) + "</p></div><input type='checkbox' class='checkbox'/><button class='remove_btn'> Delete </button> <button class='reply_btn'> Reply </button><div class='modal hide'><h2>Message</h2><h3 class='launch'>" + (value['subject']) + "</h3><h4>Sender:  " + (value['sender']) + "</h4><p>" + (value['body']) + "</p></div><div class='modal_reply hide'><h2>Reply</h2><label>To: </label><input class='to_email' type='text' value='" + (value['sender']) + "'/><textarea class='reply_area'></textarea><button class='send_btn'> Send </button></div></li>");
 				  });
 				}
 			});
@@ -100,6 +100,26 @@ $(document).ready(function($) {
 		let value = $(this).val();
 		$( ".message").hide();
 		$( ".message:contains('"+value+"')" ).show();
+
+	});
+
+
+	//Reply button
+
+	$(document).on('click', '.reply_btn', function() {
+		$(this).siblings('.modal_reply').toggleClass('hide');
+	});
+
+	$(document).on('click', '.send_btn', function() {
+		var replyEmail = $(this).siblings('.reply_area').val();
+		var dt = new Date();
+		if (!replyEmail) {
+			$(this).parent('.modal_reply').prepend("<h4 class='red'> Message is empty! Failed to send.</h4>");
+		}
+		else {
+			$(this).parent('.modal_reply').parent('.message').append("<div class='sent_message'><h4 class='sent_message_title'> Message is sent! </h4><p><b>You Replied:</b> " + replyEmail + "</p><p>On: " + dt + "</p></div>");
+			$(this).parent('.modal_reply').remove();
+		}
 
 	});
 
